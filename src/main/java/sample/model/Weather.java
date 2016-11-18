@@ -1,6 +1,5 @@
 package sample.model;
 
-import java.time.LocalDateTime;
 
 /**
  * Created by Tomek on 2016-11-17.
@@ -8,15 +7,19 @@ import java.time.LocalDateTime;
 public class Weather {
 
     private double temperatureInCelsius;
-    private LocalDateTime lastUpdates;
+    private String lastUpdates;
     private double feelsLikeTemperature;
-    private String iconURL;
     private boolean isDay;
     private double pressureMb;
     private String location;
     private WeatherCondition weatherCondition;
 
-
+    @Override
+    public String toString() {
+        return "Weather{" +
+                "lastUpdates=" + lastUpdates +
+                '}';
+    }
 
     public double getTemperatureInCelsius() {
         return temperatureInCelsius;
@@ -26,11 +29,11 @@ public class Weather {
         this.temperatureInCelsius = temperatureInCelsius;
     }
 
-    public LocalDateTime getLastUpdates() {
+    public String getLastUpdates() {
         return lastUpdates;
     }
 
-    public void setLastUpdates(LocalDateTime lastUpdates) {
+    public void setLastUpdates(String lastUpdates) {
         this.lastUpdates = lastUpdates;
     }
 
@@ -40,14 +43,6 @@ public class Weather {
 
     public void setFeelsLikeTemperature(double feelsLikeTemperature) {
         this.feelsLikeTemperature = feelsLikeTemperature;
-    }
-
-    public String getIconURL() {
-        return iconURL;
-    }
-
-    public void setIconURL(String iconURL) {
-        this.iconURL = iconURL;
     }
 
     public boolean isDay() {
@@ -72,6 +67,10 @@ public class Weather {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public void setWeatherCondition(WeatherCondition weatherCondition) {
+        this.weatherCondition = weatherCondition;
     }
 
 
