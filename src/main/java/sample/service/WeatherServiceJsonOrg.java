@@ -9,7 +9,7 @@ import sample.model.WeatherCondition;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.time.LocalDateTime;
+
 
 import static javafx.scene.input.KeyCode.J;
 import static javax.swing.UIManager.getInt;
@@ -36,7 +36,7 @@ public class WeatherServiceJsonOrg implements WeatherService {
             JSONObject currentWether = json.getJSONObject("current");
             double temperatureInCelsius = currentWether.getDouble("temp_c");
             String lastUpdated = currentWether.getString("last_updated");
-            boolean isDay = currentWether.getInt("is day")==1 ? true : false;
+            boolean isDay = currentWether.getInt("is_day")==1 ? true : false;
             double feelsLikeTemperatureInCelsius = currentWether.getDouble("feelslike_c");
             double pressureMB = currentWether.getDouble("pressure_mb");
 

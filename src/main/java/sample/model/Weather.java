@@ -73,6 +73,9 @@ public class Weather {
         this.weatherCondition = weatherCondition;
     }
 
+    public WeatherCondition getWeatherCondition() {
+        return weatherCondition;
+    }
 
     // temp_c
     // last_updates
